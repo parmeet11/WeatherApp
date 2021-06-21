@@ -1,26 +1,36 @@
 const express = require("express");
 const app = express();
+const hbs = require("hbs");
 const port = process.env.PORT || 8000;
 const path = require("path") 
 
 //console.log(path.join(__dirname, "../public"));
 const static_path = path.join(__dirname, "../public");
+const templates_path = path.join(__dirname, "../templates/views");
+const partials_path = path.join(__dirname, "../templates/partials");
+
+
+
+app.set('view engine', 'hbs');
+app.set('views', templates_path);
+hbs.registerPartials(partials_path);
+
 app.use(express.static(static_path));
 
 app.get("/" ,(req, res)=>{
-    res.send("hello from home page")
+    res.render("index")
 })
 
 app.get("/about" ,(req, res)=>{
-    res.send("hello from about page")
+    res.render("about")
 })
 
 app.get("/wheather" ,(req, res)=>{
-    res.send("hello from wheather page")
+    res.render("wheather")
 })
 
 app.get("*" ,(req, res)=>{
-    res.send("404 error page")
+    res.render("error")
 })
 
 
