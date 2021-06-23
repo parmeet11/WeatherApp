@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerlinks}}
+</head>
+<body>
+    {{>navbar}}
+    <!--main header-->
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="main">
+                    <form class="formtemp">
+                        <input type="text" id="cityname" placeholder="Enter the city name" autocomplete="off">
+                        <input type="submit" value="Search" id="submit">
+                    </form>
+                </div>
+
+                <div class="tempinfo">
+                    <div class="top">
+                        <p id="day">Tuesday</p>
+                        <p id="date">22 Jun</p>
+                    </div>
+                    <div class="output_data">
+                        <p id="city_name">Output here</p>
+                        <div class="middle_content hide_data">
+                            <p id="temp"><span id="temp_deg">0</span> <sup>o</sup>C</p>
+                            <p id="temp_status"><i class="far fa-sun" aria-hidden="true"></i>
+                            <!--<img id="image" src="http://openweathermap.org/img/wn/10d@2x.png">-->
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                    
+            
+            </div>
+        </div>
+    </div>
+    <!--footer -->
+    {{>footer}}
+    <script src="js/main.js"></script>
+</body>
+</html>

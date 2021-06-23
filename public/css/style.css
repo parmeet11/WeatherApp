@@ -87,6 +87,7 @@ html{
     border-radius: 2rem;
     text-transform: uppercase;
     box-shadow: 0 8px 6px -6px #000;
+    outline: none;
 }
 .main_header_left button:hover{
     box-shadow: 0 8px 6px -6px var(--main-color);
@@ -132,4 +133,92 @@ img{
 }
 .main_header_right figure img{
     filter: drop-shadow(0 o.5rem 1rem rgba(0,0,0,0.3));
+}
+/*wheather page*/
+.tempinfo{
+    width: 50rem;
+    margin: auto;
+    background-color: #323544;
+    border-radius: 1.5rem;
+    font-family: "Roboto", sans-serif;
+}
+.top{
+    width: 100%;
+    height: 20;
+    background-color: #3d4361;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    border-radius: 1.5rem;
+}
+.top p{
+    color: #fff;
+    font-weight: 300;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.output_data{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.output_data #city_name{
+    color: #fff;
+    padding: 2rem;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.output_data .middle_content{
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+
+}
+.output_data .middle_content p,
+.output_data .middle_content .fa{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.fa{
+    color: #009ad8;
+}
+.hide_data{
+    visibility: hidden;
+    transition: all 0.5s linear;
+    
+}
+.formtemp{
+    width: 60%;
+    position: relative;
+    margin: 6rem auto;
+}
+.formtemp input[type="text"]{
+    width: 100%;
+    color: #fff;
+    padding: 2rem 5rem 2rem 2rem;
+    background-color: #1e202b;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    outline: none;
+}
+::placeholder{
+    color: #fff;
+}
+.formtemp input[type="submit"]{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: #009ad8;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.formtemp input[type="submit"]:hover{
+    color: #009ad8;
+    background-color: #fff;
 }

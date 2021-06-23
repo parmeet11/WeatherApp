@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
 const hbs = require("hbs");
+const path = require("path")
 const port = process.env.PORT || 8000;
-const path = require("path") 
+
 
 //console.log(path.join(__dirname, "../public"));
 const static_path = path.join(__dirname, "../public");
@@ -30,7 +31,9 @@ app.get("/wheather" ,(req, res)=>{
 })
 
 app.get("*" ,(req, res)=>{
-    res.render("error")
+    res.render("error", {
+        error_msg:"Page not found!!!!!!"
+    })
 })
 
 
