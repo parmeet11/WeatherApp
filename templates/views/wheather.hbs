@@ -41,5 +41,50 @@
     <!--footer -->
     {{>footer}}
     <script src="js/main.js"></script>
+    <script>
+        const curday = document.getElementById("day");
+        const curdate = document.getElementById("date");
+        const getcurrentday = () =>{
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+            let currentdays = new Date();
+            //console.log(weekday[currentdays.getDay()]);
+            let day = weekday[currentdays.getDay()];
+            curday.innerText = day;
+        };
+        
+        const getcurrentdate = () =>{
+        
+        var months =[
+         "Jan",
+         "Feb",
+         "Mar",
+         "Apr",
+         "May",
+         "Jun",
+         "Jul",
+         "Aug",
+         "Sep",
+         "Oct",
+         "Nov",
+         "Dec",
+        ];
+        var currdate = new Date();
+        var month = months[currdate.getMonth() +1];
+        var date = currdate.getDate();
+        //curdate.innerText = date;
+        return `${date} ${month}`;
+
+        
+    };
+    getcurrentday();
+    curdate.innerHTML = getcurrentdate();
+    </script>
 </body>
 </html>
